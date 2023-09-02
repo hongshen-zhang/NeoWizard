@@ -3,12 +3,11 @@
 ![](https://img.shields.io/badge/License-MIT-lightgrey)
 ![](https://img.shields.io/badge/Version-v0.0.1-orange)
 
-[NeoWizard](http://118.89.117.111/solvegpt/index.html) 
-**Photo input supported**
-**More accurate problem-solving**
-**Display accuracy rate**
-**Automatically generate math lecture notes**
+[NeoWizard](http://118.89.117.111/solvegpt/index.html)
+### For Problem solving
+Facilitate an entire process, from capturing math problems via photos to producing automated teaching materials. Its edge over other tools lies in its accuracy and the intelligibility of its answers.
 
+### Advantage of Blockchain
 The first user who poses each question **owns the rights to the math lecture notes**. Subsequent identical questions simply call up the pdf and pay the **first user** for access.
 
 ![image](https://github.com/hongshen-zhang/NeoWizard/assets/51727955/8909ca45-261d-431b-961f-a594c8455c0f)
