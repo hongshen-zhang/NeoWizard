@@ -1,0 +1,23 @@
+nohup: ignoring input
+/root/miniconda3/lib/python3.10/site-packages/requests/__init__.py:102: RequestsDependencyWarning: urllib3 (1.26.15) or chardet (5.2.0)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({})/charset_normalizer ({}) doesn't match a supported "
+INFO:     Started server process [2538923]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     122.235.240.150:0 - "GET /getAll HTTP/1.0" 200 OK
+INFO:     122.235.240.150:0 - "GET /download HTTP/1.0" 200 OK
+[2023-08-23 01:48:37] Params: {'text': '一加一等于几', 'model': 'gpt-4-0613', 'age': '小学生', 'language': 'Chinese'}
+Chinese
+generating definition...
+generating theorem...
+generating answer...
+[{'role': 'system', 'content': ' Output all contents in Simplified Chinese. You are SolveGPT, a professional assistant for answering mathematics questions. Use Markdown with Latex. Write all formulas in latex format and wrap them with $.'}, {'role': 'user', 'content': 'Just provide the definitions used in this question: 你好,我是一位Chinese人，目前处于小学生阶段，我的问题如下："一加一等于几"。请使用Chinese回答我的问题. Do not answer the question for the time being. Output all definitions strictly according to the following Json format: [{"name":"definition name", "content":"definition content"}, ...]. If no definition is needed, output [].'}, {'role': 'assistant', 'content': '[]'}, {'role': 'user', 'content': 'Just provide the theorem used in question above. Do not answer the question for the time being. Output all theorems strictly according to the following Json format: [{"name":"definition name", "content":"definition content"}, ...]. If no theorem is needed, output [].'}, {'role': 'assistant', 'content': '[]'}, {'role': 'user', 'content': 'Answer the questions now. Just output the answer, do not use json. Output must within 300 words.'}, {'role': 'assistant', 'content': '一加一等于二。'}]
+[2023-08-23 01:48:40] Response: {'status_code': 200, 'body': {'success': True, 'message': 'Answer generated from SolveGPT.', 'data': {'question': '你好,我是一位Chinese人，目前处于小学生阶段，我的问题如下："一加一等于几"。请使用Chinese回答我的问题', 'definition': '[]', 'theorem': '[]', 'answer': '一加一等于二。', 'accuracy': 97}}}
+INFO:     122.235.240.150:0 - "POST /submitText HTTP/1.0" 200 OK
+INFO:     122.235.240.150:0 - "POST /save HTTP/1.0" 200 OK
+INFO:     122.235.240.150:0 - "GET /getAll HTTP/1.0" 200 OK
+INFO:     122.235.240.150:0 - "GET /getAll HTTP/1.0" 200 OK
+INFO:     122.235.240.150:0 - "GET /getAll HTTP/1.0" 200 OK
+INFO:     122.235.240.150:0 - "GET /getAll HTTP/1.0" 200 OK
+INFO:     122.235.240.150:0 - "GET /getAll HTTP/1.0" 200 OK

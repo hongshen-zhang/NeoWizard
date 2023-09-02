@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolveGPT——AI集智数学老师</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #333;
+            color: #ffffff;
+            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1,
+        h2 {
+            color: #4c5156;
+        }
+
+        h1 {
+            border-bottom: 1px solid #4c5156;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem 1.5rem;
+        }
+
+        button {
+            background-color: #444;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 0.6rem 1.2rem;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 0.5rem;
+            width: 100%;
+        }
+
+        #answer,
+        #question-history {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem 1.5rem;
+            max-width: 100%;
+            overflow-x: auto;
+            color: #ffffff;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        th,
+        td {
+            border: 1px solid #fff;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* 在原有的按钮类下添加 animation 类 */
+        .btn-primary.animation,
+        .btn-success.animation,
+        .btn-info.animation,
+        .btn-warning.animation,
+        .btn-secondary.animation {
+            animation: pulseAnimation 1s infinite;
+        }
+
+        /* 定义一个简单的缩放动画 */
+        @keyframes pulseAnimation {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .btn.animation {
+            transition: transform 0.2s;
+        }
+
+        .btn.animation:hover {
+            transform: scale(1.05);
+        }
+        form input[type="text"],
+    form textarea,
+    form select {
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(255, 255, 255, 0.5) !important; /* 修改边框颜色 */
+        padding: 0.5rem !important;
+        width: 100% !important;
+        transition: border-color 0.2s !important; /* 添加过渡效果 */
+    }
+
+    /* 鼠标悬停时调整边框颜色 */
+    form input[type="text"]:hover,
+    form textarea:hover,
+    form select:hover {
+        border-color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+     </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <h1 class="text-center">SolveGPT——AI集智数学老师</h1>
+    <form id="question-form">
+        <div class="mb-3">
+            <label for="model-selector" class="form-label">支持模型列表:</label>
+            <select id="model-selector" class="form-select">
+                <option value="gpt-4-0613">gpt-4-0613</option>
+                <option value="gpt-4">gpt-4</option>
+                <option value="gpt-3.5-turbo-0613">gpt-3.5-turbo-0613</option>
+                <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="model-selector" class="form-label">答案语种设置</label>
+            <select id="model-selector" class="form-select">
+                <option value="china">中文</option>
+                <option value="english">英文</option>
+             
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="model-selector" class="form-label">使用年龄阶段选项</label>
+            <select id="model-selector" class="form-select">
+                <option value="0">小学生</option>
+                <option value="1">中学生</option>
+                <option value="2">高中生</option>
+                <option value="3">大学生</option>
+                <option value="4">已经毕业</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="question" class="form-label">问题:</label>
+            <textarea id="question" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">上传图像:</label>
+            <input type="file" id="image" class="form-control" accept="image/*">
+        </div>
+        <button type="button" id="ocr-button" class="btn btn-primary">图像转文字</button>
+<button type="submit" class="btn btn-success">一键解题</button>
+    </form>
+  <h2 class="mt-3">知识与答案:</h2>
+    <pre id="answer"></pre>
+    <p id="accuracy"></p>
+    <button id="save" class="btn btn-info">保存结果到知识库</button>
+    <button id="show_pdf" class="btn btn-warning">查看pdf</button>
+    <!-- 问题数据库 -->
+    <h2 class="mt-3">知识宝库:</h2>
+    <button id="downloadBtn" class="btn btn-secondary">下载</button>
+    <input type="file" id="uploadInput" style="display:none">
+    <button id="uploadBtn" class="btn btn-secondary">上传</button>
+    <pre></pre>
+    <table id="question-history" class="mt-3">
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Definition/Theorem/Answer</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./static/main.js"></script>
+    <script>
+        // const API_BASE_URL = "http://127.0.0.1:8000/snapq/api/v1";
+        
+        const API_ROOT = "/solvegpt/api"
+        const API_BASE_URL = API_ROOT + "/v1";
+
+        const questionForm = document.getElementById("question-form");
+        const questionInput = document.getElementById("question");
+        const imageInput = document.getElementById("image");
+        const answerElement = document.getElementById("answer");
+
+        const saveButton = document.getElementById("save");
+        const questionHistory = document.querySelector("#question-history tbody");
+        const clearButton = document.getElementById("clear");
+        const ocrButton = document.getElementById("ocr-button");
+
+        const downloadBtn = document.getElementById('downloadBtn');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const uploadInput = document.getElementById('uploadInput');
+
+        const modelSelector = document.getElementById('model-selector');
+        const errorMessageDiv = document.getElementById("error-message");
+
+        const requestPdfButton = document.getElementById('show_pdf')
+
+
+        result = null;
+        async function get_all_questions() {
+            while (questionHistory.firstChild) {
+                questionHistory.removeChild(questionHistory.firstChild);
+            }
+           try{
+            const response = await fetch(API_BASE_URL + "/getAll");
+           
+
+                const result = await response.json();
+            
+                result.data.forEach(item => {
+                    const row = document.createElement("tr");
+                    const questionCell = document.createElement("td");
+                    const answerCell = document.createElement("td");
+
+                    questionCell.textContent = item.question;
+                    answerCell.textContent = "Definition:\n" + item.definition
+                        + "\nTheorem:\n" + item.theorem
+                        + "\nAnswer:\n" + item.answer;
+
+                    row.appendChild(questionCell);
+                    row.appendChild(answerCell);
+                    questionHistory.appendChild(row);
+                });
+                errorMessageDiv.textContent = "";
+
+            } catch (error) {
+                console.log(error)
+                $('#error-message').text("Error getting all questions - " + error.toString())
+                errorMessageDiv.textContent = "Error getting all questions - " + error.toString();
+            }
+
+        }
+
+        get_all_questions();
+
+        function showAnswer(result) {
+            if (result.success == false) {
+                answerElement.textContent = result.message;
+                return;
+            } else {
+                console.log(result);
+                // result to json
+                result_json = JSON.stringify(result);
+                answerElement.textContent = result_json + "\n\n";
+                answerElement.textContent += result.data.question;
+                answerElement.textContent += "\n\n";
+                answerElement.textContent += "Definition:\n";
+                answerElement.textContent += result.data.definition;
+                answerElement.textContent += "\n\n";
+                answerElement.textContent += "Theorem:\n";
+                answerElement.textContent += result.data.theorem;
+                answerElement.textContent += "\n\n";
+                answerElement.textContent += "Answer:\n";
+                answerElement.textContent += result.data.answer;
+                updateAccuracy(result.data.accuracy);
+            }
+        }
+
+        ocrButton.addEventListener("click", async (event) => {
+            event.preventDefault(); // 阻止默认行为，例如按钮点击可能导致表单提交
+            if (imageInput.files.length > 0) {
+
+                answerElement.textContent = "Loading...";
+                const formData = new FormData();
+                formData.append("image", imageInput.files[0]);
+
+                try {
+                    const response = await fetch(API_BASE_URL + "/submitImage", {
+                        method: "POST",
+                        body: formData
+                    });
+                    console.log(response);
+
+                    result = await response.json();
+                    answerElement.textContent = "";
+                    if (result.success == false) {
+                        answerElement.textContent = result.message;
+                        return;
+                    } else {
+
+                        questionInput.value = result.data.question;
+                    }
+
+
+                } catch (error) {
+                    answerElement.textContent = "Error submitting image - " + error.toString();
+                }
+            }
+        });
+
+        questionForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const selectedModel = modelSelector.value;
+
+            if (questionInput.value.trim() !== "") {
+                answerElement.textContent = "Loading...";
+                try {
+                    const formData = new FormData();
+                    formData.append("text", questionInput.value);
+                    formData.append("model", selectedModel);
+                    const response = await fetch(API_BASE_URL + "/submitText", {
+                        method: "POST",
+                        body: formData
+                    });
+
+                    result = await response.json();
+                    showAnswer(result);
+                } catch (error) {
+                    answerElement.textContent = "Error submitting image - " + error.toString();
+                }
+            } else {
+                alert("Please enter a question");
+            }
+
+        });
+
+        //         @app.post("/photoquiz/api/v1/save")
+        // async def save_question(question: str = Body(...), answer: str = Body(...)):
+        saveButton.addEventListener("click", async (event) => {
+            event.preventDefault();
+            if (result == null) {
+                alert("Please submit a question first");
+                return;
+            }
+
+            try {
+                const formData = new FormData();
+                formData.append("question", result.data.question);
+                formData.append("definition", result.data.definition);
+                formData.append("theorem", result.data.theorem);
+                formData.append("answer", result.data.answer);
+                const response = await fetch(API_BASE_URL + "/save", {
+                    method: "POST",
+                    body: formData
+                });
+
+                answerElement.textContent += "\n\nQuestion saved";
+
+                get_all_questions();
+            } catch (error) {
+                answerElement.textContent += "\n\nError saving question - " + error.toString();
+            }
+        });
+
+        downloadBtn.addEventListener('click', () => {
+            window.location.href = API_BASE_URL + '/download';
+        });
+
+        uploadBtn.addEventListener('click', () => {
+            uploadInput.click();
+        });
+
+        uploadInput.addEventListener('change', async () => {
+            const file = uploadInput.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+
+                const response = await fetch(API_BASE_URL + '/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                if (result.success == false) {
+                    alert(result.message);
+                } else {
+                    get_all_questions();
+                }
+
+                uploadInput.value = '';
+            } catch (error) {
+                alert('Error uploading file ' + error.toString());
+            }
+
+        });
+
+        requestPdfButton.addEventListener('click', function () {
+            if (result == null) {
+                return;
+            }
+            const formData = new FormData();
+            formData.append("question", result.data.question);
+            formData.append("definition", result.data.definition);
+            formData.append("theorem", result.data.theorem);
+            formData.append("answer", result.data.answer);
+
+            requestPdfButton.disabled = true;
+            requestPdfButton.textContent = "正在加载PDF...";
+
+            fetch(API_BASE_URL + '/pdf', {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.data && data.data.pdf_url) {
+                        window.location.href = API_ROOT + data.data.pdf_url;
+                    } else {
+                        console.error("Error: ", data);
+                    }
+                    requestPdfButton.disabled = false;
+                    requestPdfButton.textContent = "查看PDF";
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    requestPdfButton.disabled = false;
+                    requestPdfButton.textContent = "查看PDF";
+                });
+        });
+
+        function updateAccuracy(accuracy) {
+            const accuracyElement = document.getElementById('accuracy');
+            const probability = Math.random();
+            let accuracyColor;
+            accuracy = parseFloat(accuracy)
+
+            if (accuracy > 0.9) {
+                accuracyColor = 'green';
+            } else if (accuracy > 0.8) {
+                accuracyColor = 'orange';
+            } else {
+                accuracyColor = 'red';
+            }
+
+            accuracyElement.textContent = `Accuracy: ${accuracy}%`;
+            accuracyElement.style.color = accuracyColor;
+        }
+
+
+    </script>
+</body>
+
+</html>
+
+
+
+
