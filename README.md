@@ -17,9 +17,9 @@ The first user who poses each question **owns the rights to the math lecture not
 
 Demo Video：[NeoWizard](https://www.bilibili.com/video/BV1yj411R7FR/?share_source=copy_web&vd_source=2402ea50d5e761d0c54f9f9cb8f35a85)
 
-Website ：[solvegpt Website](http://118.89.117.111/solvegpt/index.html)
+Website ：[NeoWizard](http://118.89.117.111/solvegpt/index.html)
 
-Android : [solvegpt](https://github.com/hongshen-zhang/AI-Math-Teacher/releases/tag/v0.0.1)
+Android : [NeoWizard](https://github.com/hongshen-zhang/AI-Math-Teacher/releases/tag/v0.0.1)
 
 Github：[https://github.com/hongshen-zhang/NeoWizard](https://github.com/hongshen-zhang/NeoWizard)
 
