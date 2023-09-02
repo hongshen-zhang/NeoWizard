@@ -25,14 +25,15 @@ Github：[https://github.com/hongshen-zhang/NeoWizard](https://github.com/hongsh
 
 
 # Demand
-1. 题目没答案。
-![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/2ab8be8e-561a-4237-9eb9-55fd11b4e322)
-2. 由于不知道相关定理，有答案也看不懂。
-![图片](https://github.com/hongshen-zhang/AI-Math-Teacher/assets/51727955/78a4169e-110a-4e0c-8a15-c05388489b2f)
-3. 题目难共享：SolveGPT支持将题目的pdf作为个人资产存储到Arweave上，后续调用相同题目可以直接调用，向第一位生成者付费
-![image](https://github.com/hongshen-zhang/AI-Math-Teacher/assets/51727955/5d6296c0-daed-4f2d-8534-c6dc2cbe1ed0)
+1. No Solution for Problem.
+![image](https://github.com/hongshen-zhang/NeoWizard/assets/51727955/1503150f-9a30-46a6-9cd7-c2ad5f51a856)
+2. Due to unfamiliarity with the relevant theorems, even having the answer doesn't make it understandable.
+![image](https://github.com/hongshen-zhang/NeoWizard/assets/51727955/3d78c150-a7c9-451d-a0d2-c661a16bb6d1)
+3. Difficulty in sharing problems: NeoWizard allows users to store the problem's pdf on Neo as a personal asset. When accessing the same problem later, it can be directly retrieved, with payment made to the initial creator.
+![image](https://github.com/hongshen-zhang/NeoWizard/assets/51727955/17036dbe-3f8f-47aa-864d-9e6b487706d9)
 
-## Spot 产品亮点
+
+## Spot 
 ![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/4ae3cff4-272d-4bcc-b6a9-98a667d89ec1)
 ![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/7aff38a8-95d8-42ef-8a6d-453d101fb1c0)
 ![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/7777975e-be56-4f78-a2f6-7607d85b3f57)
