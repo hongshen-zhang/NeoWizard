@@ -57,20 +57,19 @@ Github：[https://github.com/hongshen-zhang/NeoWizard](https://github.com/hongsh
 | Official Launch | Add login function                                         | Oct  | ❌       |
 
 
+## How to Use:
 
-## 使用方法：
-
-### 请补充OCR Key和OPENAI Key
+### Please add the OCR Key and OPENAI Key
 
 ```
-1. ocr secret key
+1. OCR secret key
 ./solvegpt/main.py line 95:
 def tencent_ocr(img_base64):
     cred = credential.Credential(
         "", ""
     )
  
-2. openai secret key
+2. OpenAI secret key
 ./solvegpt/openai_config.json line 2:
 {
     "api_key": "",
