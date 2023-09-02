@@ -14,7 +14,7 @@ The first user who poses each question **owns the rights to the math lecture not
 ![图片](https://github.com/hongshen-zhang/AI-Math-Teacher/assets/51727955/164050ce-4814-4c98-a9e0-d4aa7ebda4c7)
 
 
-## Resource 资源
+## Resource
 
 Demo 视频：[solvegpt演示](https://www.bilibili.com/video/BV1yj411R7FR/?share_source=copy_web&vd_source=2402ea50d5e761d0c54f9f9cb8f35a85)
 
@@ -25,7 +25,7 @@ Demo 视频：[solvegpt演示](https://www.bilibili.com/video/BV1yj411R7FR/?shar
 Github：[https://github.com/hongshen-zhang/AI-Math-Teacher](https://github.com/hongshen-zhang/AI-Math-Teacher)
 
 
-# Demand 实际需求
+# Demand
 1. 题目没答案。
 ![图片](https://github.com/hongshen-zhang/Unique-hackday_solvegpt/assets/51727955/2ab8be8e-561a-4237-9eb9-55fd11b4e322)
 2. 由于不知道相关定理，有答案也看不懂。
