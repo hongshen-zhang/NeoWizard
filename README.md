@@ -43,18 +43,19 @@ Github：[https://github.com/hongshen-zhang/NeoWizard](https://github.com/hongsh
 ## Plan 
 
 
-| 需求         | 描述                                                     | 时间 | 进度 |
-| ------------ | -------------------------------------------------------- | ---- | ---- |
-| 基本功能     | 网页端上线           | 7 月 | ✅   |
-| 基本功能     | 安卓端上限                             | 8 月 | ✅   |
-| 基本功能      | 自动生成beamer                  | 8 月 | ✅   |
-| 写专利 1/2       | 一种基于多模型对抗的数学问题答案生成方法                   | 8 月 | ✅   |
-| 写专利 2/2     | 一种基于beamer的自动化数学课件生成方法              | 8 月 |✅   |
-| 基本功能     | 支持中英文，黑暗模式，不同学历              | 8 月 |✅   |
-| 基本功能     | 上线web3支付功能                | 8 月 |✅   |
-| 代码优化   | 加快运行速度                                 | 9 月 | ❌   |
-| 注册域名   | solvegpt.cn                                 | 9 月 | ❌   |
-| 正式上线 | 增加登录功能                             | 10 月 | ❌   |
+| Requirement  | Description                                                 | Time | Progress |
+| ------------ | ----------------------------------------------------------- | ---- | -------- |
+| Basic Feature | Website launch                                              | July | ✅       |
+| Basic Feature | Android version release                                     | Aug  | ✅       |
+| Basic Feature | Automatic beamer generation                                 | Aug  | ✅       |
+| Basic Feature | Support for Chinese and English, dark mode, different levels| Aug  | ✅       |
+| Basic Feature | Launch web3 payment function                                | Aug  | ✅       |
+| Patent 1/2   | A method for generating math problem answers based on multi-model adversarial approaches | Sept | ✅       |
+| Patent 2/2   | An automated mathematical lecture note generation method based on beamer | Sept | ✅       |
+| Code Optimization | Speed up execution                                       | Sept | ❌       |
+| Domain Registration | solvegpt.cn                                             | Sept | ✅       |
+| Official Launch | Add login function                                         | Oct  | ❌       |
+
 
 
 ## 使用方法：
