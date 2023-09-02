@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/License-MIT-lightgrey)
 ![](https://img.shields.io/badge/Version-v0.0.1-orange)
 
-[solvegpt](http://118.89.117.111/solvegpt/index.html) 
+[NeoWizard](http://118.89.117.111/solvegpt/index.html) 
 **Photo input supported**
 **More accurate problem-solving**
 **Display accuracy rate**
