@@ -11,6 +11,9 @@ Facilitate an entire process, from capturing math problems via photos to produci
 The first user who poses each question **owns the rights to the math lecture notes**. Subsequent identical questions simply call up the pdf and pay the **first user** for access.
 
 ![image](https://github.com/hongshen-zhang/NeoWizard/assets/51727955/8909ca45-261d-431b-961f-a594c8455c0f)
+![ab3cf8f157bfe5602c8e710ee11aa9c](https://github.com/hongshen-zhang/NeoWizard/assets/51727955/26d9b68d-1f73-4b36-9983-611f658b9465)
+
+
 
 ## Resource
 
