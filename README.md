@@ -1,9 +1,12 @@
 # NeoWizard —— Blockchain Math Teacher
+Founder : Iris
+National University of Singapore
+iris921426135@gmail.com
 
 ![](https://img.shields.io/badge/License-MIT-lightgrey)
 ![](https://img.shields.io/badge/Version-v0.0.1-orange)
 
-[NeoWizard](http://118.89.117.111/solvegpt/index.html)
+[NeoWizard](http://118.89.117.111/neopay/)
 ### For Problem solving
 Facilitate an entire process, from capturing math problems via photos to producing automated teaching materials. Its edge over other tools lies in its accuracy and the intelligibility of its answers.
 
@@ -17,9 +20,11 @@ The first user who poses each question **owns the rights to the math lecture not
 
 ## Resource
 
-Demo Video：[NeoWizard](https://www.bilibili.com/video/BV1yj411R7FR/?share_source=copy_web&vd_source=2402ea50d5e761d0c54f9f9cb8f35a85)
+Deck Link：[NeoWizard](https://docs.google.com/presentation/d/112biul8r-p6cwILilqTb5WUsT9FU2Aya/edit?usp=sharing&ouid=102147246522693605617&rtpof=true&sd=true)
 
-Website ：[NeoWizard](http://118.89.117.111/solvegpt/index.html)
+Demo Video Link: [NeoWizard](https://drive.google.com/file/d/1_2itzjz-bNiD3maZFQ1ia5j579MU0f_E/view?usp=sharing)
+
+Website ：[NeoWizard](solvegpt.cn/neopay/)
 
 Android : [NeoWizard](https://github.com/hongshen-zhang/AI-Math-Teacher/releases/tag/v0.0.1)
 
