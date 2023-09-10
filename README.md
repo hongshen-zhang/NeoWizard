@@ -1,11 +1,7 @@
 # ![image](https://github.com/hongshen-zhang/NeoWizard/assets/51727955/3ba6bf4a-2460-4d1f-98de-5e65e4ec2b2a) 
 # Blockchain Math Teacher
 ## Founder : 
-Iris
-
-National University of Singapore
-
-iris921426135@gmail.com
+Iris    National University of Singapore    iris921426135@gmail.com
 
 ![](https://img.shields.io/badge/License-MIT-lightgrey)
 ![](https://img.shields.io/badge/Version-v0.0.1-orange)
