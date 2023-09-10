@@ -1,4 +1,4 @@
-# NeoWizard —— Blockchain Math Teacher
+# ![image](https://github.com/hongshen-zhang/NeoWizard/assets/51727955/3ba6bf4a-2460-4d1f-98de-5e65e4ec2b2a) —— Blockchain Math Teacher
 Founder : Iris
 National University of Singapore
 iris921426135@gmail.com
@@ -7,7 +7,6 @@ iris921426135@gmail.com
 ![](https://img.shields.io/badge/Version-v0.0.1-orange)
 
 [NeoWizard](http://118.89.117.111/neopay/)
-![image](https://github.com/hongshen-zhang/NeoWizard/assets/51727955/2cb283e7-78cf-4907-b30f-beee4c539f26)
 
 ### For Problem solving
 Facilitate an entire process, from capturing math problems via photos to producing automated teaching materials. Its edge over other tools lies in its accuracy and the intelligibility of its answers.
